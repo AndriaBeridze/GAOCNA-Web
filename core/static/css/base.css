@@ -12,52 +12,57 @@
     from {
         display: none;
         opacity: 0;
-    } to {
+    }
+    to {
         display: flex;
         opacity: 1;
     }
 }
 
 @keyframes vanish {
-    to {
-        display: none;
-        opacity: 0;
-    } from {
+    from {
         display: flex;
         opacity: 1;
     }
+    to {
+        display: none;
+        opacity: 0;
+    }
 }
 
-/* Root */
+/* Root Variables */
 :root {
+    /* Font */
     --font-primary-en: 'Poppins', sans-serif;
+
+    /* Colors */
     --body-bg-color: #DDDDDD;
     --color-primary: #BA9139;
     --color-secondary: #F8F8F8;
     --text-primary: #F7F7F7; 
     --text-secondary: black;
+    --fb-background: #3B5998;
+    --ig-background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
 
-    /* Body */
+    /* Dimensions */
     --side-padding: 120px;
-    
-    /* Navbar */
     --nav-height: 70px;
-
-    /* Box Shadows */
-    --box-shadow-light: rgba(74, 74, 74, 0.5); 
-    --box-shadow-dark: rgba(67, 67, 67, 0.5);  
+    --soc-media-icon-size: 45px;
+    --soc-media-icon-width-extended: 60px;
+    --nav-toggler-size: 35px;
+    --nav-toggler-font-size: 25px;
     
-    /* Button Styles */
+    /* Spacing */
     --button-padding: 2px 24px;
     --button-border-radius: 4px; 
     --button-border-width: 1px; 
-    
-    /* Navbar Toggler */
-    --nav-toggler-size: 35px;
-    --nav-toggler-font-size: 25px;
     --nav-toggler-border-width: 1px;
     --nav-toggler-border-radius: 4px;
-    
+
+    /* Box Shadows */
+    --box-shadow-light: #4A4A4A80; 
+    --box-shadow-dark: #43434380;
+
     /* Transition Durations */
     --transition-duration: 0.3s; 
 }

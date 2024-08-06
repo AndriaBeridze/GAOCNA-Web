@@ -50,11 +50,25 @@
             <button class="navbar-toggler" id="navbar-toggler" aria-label="Toggle navigation">
                 <i class="bi bi-list"></i>
             </button>
+            <script src="{% static 'js/navbar.js' %}"></script>
         </nav>
+        <div class="social-media-icons" id="social-media-icons">
+            <div class="soc-links-toggler" id="soc-link-toggler">
+                <i class="bi bi-caret-right-fill"></i>
+            </div>
+            <div class="icons">
+                <a href="https://www.facebook.com/profile.php?id=100064567997597" target="_blank">
+                    <i class="bi bi-facebook soc-media-icon" id="facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/gaocna/" target="_blank">
+                    <i class="bi bi-instagram soc-media-icon" id="instagram"></i>
+                </a>
+            </div>
+            <script src="{% static 'js/social-media-icons.js' %}"></script>
+        </div>
         <main class="main-content">
             {% block body %} 
             {% endblock %}
         </main>
-        <script src="{% static 'js/nav.js' %}"></script>
     </body>
 </html>
