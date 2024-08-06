@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 # Create your views here.
 def home(request):
-    return HttpResponse('Hello')
+    return render(request, 'core/home.html', {
+        'active_page': 'home'
+    })

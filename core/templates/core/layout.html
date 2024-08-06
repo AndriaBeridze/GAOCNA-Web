@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %} {% endblock %}</title>
+        <link rel="shortcut icon" href="{% static 'icons/logo.ico' %}" type="image/x-icon">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" href="{% static 'css/pages/layout.css' %}">
+        <link rel="stylesheet" href="{% static 'css/responsive/layout.css' %}">
+    </head>
+    <body>
+        <nav class="navbar">
+            <a href="{% url 'core:home' %}" class="navbar-logo">
+                <img src="{% static 'images/logo.png' %}" alt="Site Logo" class="navbar-logo-img">
+            </a>
+            <ul class="navbar-menu" id="navbar-menu">
+                <a href="{% url 'core:home' %}" class="navbar-menu-logo">
+                    <img src="{% static 'images/logo.png' %}" alt="Site Logo" class="navbar-menu-logo-img">
+                </a>
+                <li class="navbar-item">
+                    <a href="{% url 'core:home' %}" class="navbar-link">Home</a>
+                </li>
+                <li class="navbar-item dropdown">
+                    <a class="navbar-link">Georgian Church <i class="bi bi-caret-down-fill arrow"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-menu-link">Item 1</a></li>
+                        <li><a href="#" class="dropdown-menu-link">Item 2</a></li>
+                        <li><a href="#" class="dropdown-menu-link">Item 3</a></li>
+                    </ul>
+                </li>
+                <li class="navbar-item dropdown">
+                    <a class="navbar-link">About <i class="bi bi-caret-down-fill arrow"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-menu-link">Item 1</a></li>
+                        <li><a href="#" class="dropdown-menu-link">Item 2</a></li>
+                        <li><a href="#" class="dropdown-menu-link">Item 3</a></li>
+                        <li><a href="#" class="dropdown-menu-link">Item 4</a></li>
+                        <li><a href="#" class="dropdown-menu-link">Item 5</a></li>
+                    </ul>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link">Contact</a>
+                </li>
+                <li class="navbar-item navbar-item-special">
+                    <a href="#" class="navbar-link">Donate</a>
+                </li>
+            </ul>
+            <button class="navbar-toggler" id="navbar-toggler" aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
+        </nav>
+        <main class="main-content">
+            {% block body %} 
+            {% endblock %}
+        </main>
+        <script src="{% static 'js/nav.js' %}"></script>
+    </body>
+</html>
