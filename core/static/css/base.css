@@ -7,6 +7,11 @@
     src: url('../fonts/Poppins-Regular.ttf');
 }
 
+@font-face {
+    font-family: 'Bpg_glaho_sylfaen';
+    src: url('../fonts/bpg_glaho_sylfaen.ttf');
+}
+
 /* Animations */
 @keyframes appear {
     from {
@@ -34,6 +39,7 @@
 :root {
     /* Font */
     --font-primary-en: 'Poppins', sans-serif;
+    --font-primary-ka: 'Bpg_glaho_sylfaen', sans-serif;
 
     /* Colors */
     --body-bg-color: #DDDDDD;

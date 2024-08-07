@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ka">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %} {% endblock %}</title>
+        <link rel="shortcut icon" href="{% static 'icons/logo.ico' %}" type="image/x-icon">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" href="{% static 'css/pages/layout.css' %}">
+        <link rel="stylesheet" href="{% static 'css/responsive/layout.css' %}">
+    </head>
+    <body class="ka">
+        <nav class="navbar">
+            <a href="{% url 'core:home_ka' %}" class="navbar-logo">
+                <img src="{% static 'images/logo-extended-ka.png' %}" alt="Site Logo" class="navbar-logo-img">
+            </a>
+            <ul class="navbar-menu" id="navbar-menu">
+                <a href="{% url 'core:home_ka' %}" class="navbar-menu-logo">
+                    <img src="{% static 'images/logo.png' %}" alt="Site Logo" class="navbar-menu-logo-img">
+                </a>
+                <li class="navbar-item">
+                    <a href="{% url 'core:home_ka' %}" class="navbar-link">მთავარი</a>
+                </li>
+                <li class="navbar-item dropdown">
+                    <a class="navbar-link">საქართველოს ეკლესია <i class="bi bi-caret-down-fill arrow"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-menu-link">ისტორია</a></li>
+                        <li><a href="#" class="dropdown-menu-link">პატრიარქი</a></li>
+                        <li><a href="#" class="dropdown-menu-link">წმინდა სინოდი</a></li>
+                    </ul>
+                </li>
+                <li class="navbar-item dropdown">
+                    <a class="navbar-link">ეპარქია<i class="bi bi-caret-down-fill arrow"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-menu-link">ეპარქიის ისტორია</a></li>
+                        <li><a href="#" class="dropdown-menu-link">მღვდელმთავარი</a></li>
+                        <li><a href="#" class="dropdown-menu-link">სამრევლოები</a></li>
+                        <li><a href="#" class="dropdown-menu-link">მონასტრები</a></li>
+                        <li><a href="#" class="dropdown-menu-link">სამღვდელოება</a></li>
+                        <li><a href="#" class="dropdown-menu-link">სამთავარხუცესო</a></li>
+                        <li><a href="#" class="dropdown-menu-link">საეპიტროპოსოები</a></li>
+                        <li><a href="#" class="dropdown-menu-link">სამდივნო</a></li>
+                        <li><a href="#" class="dropdown-menu-link">ადმინისტრაციული საბჭო</a></li>
+                        <li><a href="#" class="dropdown-menu-link">დირექტორთა საბჭო</a></li>
+                        <li><a href="#" class="dropdown-menu-link">საეკლესიო სასამართლო</a></li>
+                        <li><a href="#" class="dropdown-menu-link">ეპარქიის დოკუმენტები</a></li>
+                    </ul>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link">კონტაქტი</a>
+                </li>
+                <li class="navbar-item navbar-item-special">
+                    <a href="#" class="navbar-link">შესაწირი</a>
+                </li>
+                <a href="/en" class="translator">
+                    <img src="{% static 'images/united-states-flag.png' %}" alt="united-states-flag">
+                </a>
+            </ul>
+            <button class="navbar-toggler" id="navbar-toggler" aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
+            <script src="{% static 'js/navbar.js' %}"></script>
+        </nav>
+        <div class="social-media-icons" id="social-media-icons">
+            <a href="https://www.facebook.com/profile.php?id=100064567997597" target="_blank">
+                <i class="bi bi-facebook soc-media-icon" id="facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/gaocna/" target="_blank">
+                <i class="bi bi-instagram soc-media-icon" id="instagram"></i>
+            </a>
+        </div>
+        <main class="main-content">
+            {% block body %} 
+            {% endblock %}
+        </main>
+    </body>
+</html>

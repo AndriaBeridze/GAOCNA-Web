@@ -21,7 +21,8 @@
         top: 100%;
         left: 50%;
         transform: translateX(-50%);
-        width: 170px;
+        width: auto;
+        padding: 0px 20px;
         display: none;
         opacity: 0;
         flex-direction: column;
@@ -48,6 +49,7 @@
     .dropdown-menu-link {
         color: var(--text-secondary) !important;
         position: relative;
+        text-wrap: nowrap;
     }
     
     .dropdown-menu-link::after {
@@ -86,7 +88,8 @@
         position: fixed;
         top: 0;
         left: 0;
-        bottom: 0;
+        height: 100vh;
+        overflow-y: auto;
         transform: translateX(-100%);
         width: 400px;
         max-width: calc(100% - 2 * var(--side-padding) - 35px);
@@ -108,6 +111,7 @@
         overflow: hidden;
         position: relative;
         transition-delay: 0s !important;
+        flex: 0 0 auto;
     }
 
     .navbar-item.unfold {
@@ -155,12 +159,8 @@
         height: 50px !important;
     }
 
-    .navbar-menu > li:last-child {
-        height: 52px !important;
-    }
-
     .navbar-menu > li:last-child a,
-    .navbar-menu > li:nth-last-child(2) a {
+    .navbar-menu > li:nth-last-child(3) a {
         border: 0 !important;
     }
 
@@ -183,7 +183,7 @@
 
     .navbar-item-special a {
         width: 85%;
-        height: 50px !important;
+        height: 45px !important;
         border-radius: 0;
         justify-content: flex-start;
     }
@@ -198,13 +198,14 @@
     .navbar-menu > a img {
         width: 100%;
     }
-}
 
-@media screen and (min-width: 769px) {
-    .soc-media-icon:hover {
-        width: var(--soc-media-icon-width-extended);
-        border-top-right-radius: 10%;
-        border-bottom-right-radius: 10%;
+    .translator {
+        width: 100% !important;
+    }
+
+    .translator img {
+        width: 40px !important;
+        margin-left: 7.5%;
     }
 }
 
@@ -214,24 +215,7 @@
     }
 
     .social-media-icons {
-        transition: transform var(--transition-duration);
-        transform: translate(calc(-1 * var(--soc-media-icon-size)), -50%);
-    }
-
-    .social-media-icons.show {
-        transform: translate(0, -50%);
-    }
-
-    .soc-links-toggler i {
-        transition: transform var(--transition-duration);
-    }
-
-    .show .soc-links-toggler i {
-        transform: rotate(180deg);
-    }
-
-    .soc-links-toggler {
-        display: flex;
+        display: none;
     }
 }
 
