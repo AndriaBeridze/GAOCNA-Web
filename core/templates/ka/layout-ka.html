@@ -9,9 +9,10 @@
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
         <link rel="stylesheet" href="{% static 'css/pages/layout.css' %}">
         <link rel="stylesheet" href="{% static 'css/responsive/layout.css' %}">
+        {% block css %} {% endblock %}
     </head>
     <body class="ka">
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
             <a href="{% url 'core:home_ka' %}" class="navbar-logo">
                 <img src="{% static 'images/logo-extended-ka.png' %}" alt="Site Logo" class="navbar-logo-img">
             </a>
@@ -71,7 +72,7 @@
             </a>
         </div>
         <main class="main-content">
-            {% block body %} 
+            {% block main %} 
             {% endblock %}
         </main>
     </body>

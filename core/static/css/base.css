@@ -51,7 +51,7 @@
     --ig-background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
 
     /* Dimensions */
-    --side-padding: 120px;
+    --side-padding: 100px;
     --nav-height: 70px;
     --soc-media-icon-size: 45px;
     --soc-media-icon-width-extended: 60px;
@@ -71,4 +71,7 @@
 
     /* Transition Durations */
     --transition-duration: 0.3s; 
+
+    /* Widgets */
+    --widget-panel-width: 220px;
 }
