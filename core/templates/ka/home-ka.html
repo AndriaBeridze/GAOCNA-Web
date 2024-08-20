@@ -9,22 +9,85 @@
 {% endblock %}
 
 {% block main %}    
-    <div class="widget-panel">
-        <div class="widget">
-            <div class="widget-title">
-
-            </div>
-            <div class="widget-content">
-                <div class="widget-image">
-
+    <section class="widgets-panel">
+        <article class="widget">
+            <header class="widget-header">
+                სათაური 1
+            </header>
+            <div class="widget-body">
+                <div class="widget-image-container">
+                    <img src="{% static 'images/test/widget-test.jpg' %}" alt="სურათი">
                 </div>
             </div>
+        </article>
+        <article class="widget">
+            <header class="widget-header">
+                სათაური 2
+            </header>
+            <div class="widget-body">
+                <div class="widget-image-container">
+                    <img src="{% static 'images/test/widget-test-2.jpeg' %}" alt="სურათი">
+                </div>
+            </div>
+        </article>
+        <article class="widget">
+            <header class="widget-header">
+                სათაური 3
+            </header>
+            <div class="widget-body">
+            </div>
+        </article>
+    </section>
+    <section class="news-carousel-panel">
+        <div class="news-carousel-slide">
+            <nav class="carousel-navigation" id="carousel-navigation">
+                <button class="carousel-btn" id="prev">
+                    <i class="bi bi-caret-left-fill"></i>
+                </button>
+                <button class="carousel-btn" id="next">
+                    <i class="bi bi-caret-right-fill"></i>
+                </button>
+            </nav>
+            {% for news in recent_news %}
+                <article class="news-item" id="news">
+                    <div class="news-thumbnail">
+                        <img src="{{ news.thumbnail.url }}" alt="Image">
+                    </div>
+                    <div class="news-details">
+                        <div class="news-info">
+                            <h3 class="news-title">{{ news.title }}</h3>
+                            <p class="news-date"><span>თარიღი:</span> <span lang="en">{{ news.date | date:"m/d/Y" }}</span></p>
+                        </div>
+                        <a href="#" class="read-more-link">სრულად წაკითხვა</a>
+                    </div>
+                </article>
+            {% endfor %}
+            <div class="carousel-indicators" id="carousel-indicators">
+            </div>
+            <script src="{% static 'js/news-carousel-slide.js' %}"></script>
         </div>
-    </div>
-    <div class="news-panel">
-
-    </div>
-    <div class="widget-panel">
-
-    </div>
+    </section>
+    <aside class="widgets-panel">
+        <article class="widget">
+            <header class="widget-header">
+                სათაური 4
+            </header>
+            <div class="widget-body">
+            </div>
+        </article>
+        <article class="widget">
+            <header class="widget-header">
+                სათაური 5
+            </header>
+            <div class="widget-body">
+            </div>
+        </article>
+        <article class="widget">
+            <header class="widget-header">
+                სათაური 6
+            </header>
+            <div class="widget-body">
+            </div>
+        </article>
+    </aside>
 {% endblock %}

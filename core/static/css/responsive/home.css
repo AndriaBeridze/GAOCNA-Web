@@ -1,0 +1,18 @@
+@media screen and (width < 1400px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .widgets-panel {
+        display: none;
+    }
+
+    .carousel-btn {
+        font-size: 16px;
+    }
+
+    :root {
+        --carousel-btn-width: 30px;
+        --carousel-btn-height: 48px;
+    }
+}

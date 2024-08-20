@@ -11,14 +11,14 @@
         <link rel="stylesheet" href="{% static 'css/responsive/layout.css' %}">
         {% block css %} {% endblock %}
     </head>
-    <body class="ka">
+    <body>
         <nav class="navbar" id="navbar">
             <a href="{% url 'core:home_ka' %}" class="navbar-logo">
-                <img src="{% static 'images/logo-extended-ka.png' %}" alt="Site Logo" class="navbar-logo-img">
+                <img src="{% static 'images/logos/logo-extended-ka.png' %}" alt="Site Logo" class="navbar-logo-img">
             </a>
             <ul class="navbar-menu" id="navbar-menu">
                 <a href="{% url 'core:home_ka' %}" class="navbar-menu-logo">
-                    <img src="{% static 'images/logo.png' %}" alt="Site Logo" class="navbar-menu-logo-img">
+                    <img src="{% static 'images/logos/logo.png' %}" alt="Site Logo" class="navbar-menu-logo-img">
                 </a>
                 <li class="navbar-item">
                     <a href="{% url 'core:home_ka' %}" class="navbar-link">მთავარი</a>
@@ -55,7 +55,7 @@
                     <a href="#" class="navbar-link">შესაწირი</a>
                 </li>
                 <a href="/en" class="translator">
-                    <img src="{% static 'images/united-states-flag.png' %}" alt="united-states-flag">
+                    <img src="{% static 'images/flags/united-states.png' %}" alt="united-states-flag">
                 </a>
             </ul>
             <button class="navbar-toggler" id="navbar-toggler" aria-label="Toggle navigation">
@@ -69,6 +69,9 @@
             </a>
             <a href="https://www.instagram.com/gaocna/" target="_blank">
                 <i class="bi bi-instagram soc-media-icon" id="instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@georgianapostolicorthodoxc342/featured" target="_blank">
+                <i class="bi bi-youtube soc-media-icon" id="youtube"></i>
             </a>
         </div>
         <main class="main-content">

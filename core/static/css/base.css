@@ -47,11 +47,16 @@
     --color-secondary: #F8F8F8;
     --text-primary: #F7F7F7; 
     --text-secondary: black;
+    --accent-color: #ebbf50;
+    --carousel-indicators-bg-color: #121317;
+    --carousel-btn-bg-color: #C8C8C8CC;
     --fb-background: #3B5998;
     --ig-background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+    --yt-background: #FF0000;
+    --news-slide-bg-color: rgb(170, 170, 170, 0.7); 
 
     /* Dimensions */
-    --side-padding: 100px;
+    --side-padding: 80px;
     --nav-height: 70px;
     --soc-media-icon-size: 45px;
     --soc-media-icon-width-extended: 60px;
@@ -71,7 +76,23 @@
 
     /* Transition Durations */
     --transition-duration: 0.3s; 
+    --news-item-transition-duration: 1.5s;
 
     /* Widgets */
-    --widget-panel-width: 220px;
+    --widget-panel-width: 230px;
+    --widget-min-height: 200px; 
+    --widget-max-height: 225px;
+    --widget-col-gap: 40px;
+    --widget-row-gap: 20px;
+    --widget-header-border-radius: 10px;
+
+    /* News */
+    --news-slide-margin: 10px;
+    --news-details-height: 80px;
+    --news-carousel-slide-border-radius: 15px;
+    --news-item-gap: 10px;
+    --news-info-gap: 20px;
+    --carousel-btn-height: 64px;
+    --carousel-btn-width: 40px;
+    --carousel-indicators-height: 25px;
 }

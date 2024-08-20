@@ -7,12 +7,13 @@ body {
     padding: 0 var(--side-padding);
 }
 
-body.ka {
-    font-family: var(--font-primary-ka);
+*[lang="en"] {
+    font-family: var(--font-primary-en);
+    font-size: 14px;
 }
 
-body.en {
-    font-family: var(--font-primary-en);
+*[lang="ka"] {
+    font-family: var(--font-primary-ka);
 }
 
 a {
@@ -95,7 +96,7 @@ i {
     left: 50%;
     transform: translateX(-50%);
     width: 0;
-    height: 1px;
+    height: 1.5px;
     background-color: var(--text-primary);
     transition: width var(--transition-duration);
 }
@@ -141,6 +142,7 @@ i {
     border-radius: var(--nav-toggler-border-radius);
     font-size: var(--nav-toggler-font-size);
     transition: background-color var(--transition-duration), color var(--transition-duration);
+    flex: 0 0 auto;
 }
 
 .navbar-toggler:hover {
@@ -187,6 +189,10 @@ a:last-child .soc-media-icon {
     background: var(--ig-background);
 }
 
+#youtube {
+    background: var(--yt-background);
+}
+
 .translator {
     position: relative;
     display: flex;
@@ -212,7 +218,7 @@ a:last-child .soc-media-icon {
     position: relative;
     display: flex;
     width: 100%;
-    min-height: calc(100vh - var(--nav-height));
+    height: calc(100svh - var(--nav-height));
     padding-top: var(--nav-height);
     background-color: var(--color-secondary);
     box-shadow: 0 0 15px var(--box-shadow-dark);
