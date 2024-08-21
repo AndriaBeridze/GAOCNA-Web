@@ -1,10 +1,12 @@
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     color: var(--text-primary);
     background-color: var(--body-bg-color);
     margin: 0;
     padding: 0 var(--side-padding);
+    overflow-x: hidden;
 }
 
 *[lang="en"] {
@@ -222,7 +224,39 @@ a:last-child .soc-media-icon {
     padding-top: var(--nav-height);
     background-color: var(--color-secondary);
     box-shadow: 0 0 15px var(--box-shadow-dark);
+    z-index: 100;
 }
 
 
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--footer-min-height);
+    width: 100vw;
+    background-color: var(--footer-bg-color);
+    color: var(--text-primary);
+    z-index: 200;
+    box-shadow: 0 0 10px var(--box-shadow-light);
+    position: relative;
+    padding-bottom: var(--copyright-height);
+}
 
+.copyright {
+    background-color: var(--copyright-bg-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyright p {
+    padding: 0;
+    text-wrap: wrap;
+    margin: 0 20px;
+    text-align: center;
+}

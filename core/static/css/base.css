@@ -17,8 +17,7 @@
     from {
         display: none;
         opacity: 0;
-    }
-    to {
+    } to {
         display: flex;
         opacity: 1;
     }
@@ -28,8 +27,7 @@
     from {
         display: flex;
         opacity: 1;
-    }
-    to {
+    } to {
         display: none;
         opacity: 0;
     }
@@ -43,9 +41,10 @@
 
     /* Colors */
     --body-bg-color: #DDDDDD;
+    --footer-bg-color: #D2D2D2;
     --color-primary: #BA9139;
     --color-secondary: #F8F8F8;
-    --text-primary: #F7F7F7; 
+    --text-primary: #F7F7F7;
     --text-secondary: black;
     --accent-color: #ebbf50;
     --carousel-indicators-bg-color: #121317;
@@ -53,7 +52,8 @@
     --fb-background: #3B5998;
     --ig-background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
     --yt-background: #FF0000;
-    --news-slide-bg-color: rgb(170, 170, 170, 0.7); 
+    --news-slide-bg-color: rgb(170, 170, 170, 0.7);
+    --copyright-bg-color: #333333;
 
     /* Dimensions */
     --side-padding: 80px;
@@ -62,32 +62,32 @@
     --soc-media-icon-width-extended: 60px;
     --nav-toggler-size: 35px;
     --nav-toggler-font-size: 25px;
-    
+
     /* Spacing */
     --button-padding: 2px 24px;
-    --button-border-radius: 4px; 
-    --button-border-width: 1px; 
+    --button-border-radius: 4px;
+    --button-border-width: 1px;
     --nav-toggler-border-width: 1px;
     --nav-toggler-border-radius: 4px;
 
     /* Box Shadows */
-    --box-shadow-light: #4A4A4A80; 
+    --box-shadow-light: #4A4A4A80;
     --box-shadow-dark: #43434380;
 
     /* Transition Durations */
-    --transition-duration: 0.3s; 
+    --transition-duration: 0.3s;
     --news-item-transition-duration: 1.5s;
 
     /* Widgets */
     --widget-panel-width: 230px;
-    --widget-min-height: 200px; 
+    --widget-min-height: 200px;
     --widget-max-height: 225px;
     --widget-col-gap: 40px;
     --widget-row-gap: 20px;
     --widget-header-border-radius: 10px;
 
     /* News */
-    --news-slide-margin: 10px;
+    --news-slide-margin: 20px;
     --news-details-height: 80px;
     --news-carousel-slide-border-radius: 15px;
     --news-item-gap: 10px;
@@ -95,4 +95,7 @@
     --carousel-btn-height: 64px;
     --carousel-btn-width: 40px;
     --carousel-indicators-height: 25px;
+
+    /* Footer */
+    --footer-min-height: 300px;
 }
