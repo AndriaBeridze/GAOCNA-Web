@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+from dotenv import load_dotenv
+load_dotenv()
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,11 +25,9 @@ DATE_FORMAT = '%Y-%m-%d %H:%M:%S'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-bjc4^&_7$zn9=b1+^hs=j@%r9x*fvw21l5nh5ayxt+#&5vte8e'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG') == 'True'
 
 ALLOWED_HOSTS = ['*']
 
