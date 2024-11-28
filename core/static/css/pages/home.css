@@ -89,6 +89,14 @@
     text-decoration: underline;
 }
 
+.news-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
 .carousel-navigation {
     position: absolute;
     top: 50%;

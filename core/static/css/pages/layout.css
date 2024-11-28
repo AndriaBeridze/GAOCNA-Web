@@ -94,11 +94,11 @@ i {
 .dropdown-menu-link::after {
     content: '';
     position: absolute;
-    bottom: -1px;
+    bottom: -1.5px;
     left: 50%;
     transform: translateX(-50%);
     width: 0;
-    height: 1.5px;
+    height: 1px;
     background-color: var(--text-primary);
     transition: width var(--transition-duration);
 }
@@ -232,7 +232,8 @@ a:last-child .soc-media-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: var(--footer-min-height);
+    min-height: 100px;
+    height: auto;
     width: 100vw;
     background-color: var(--footer-bg-color);
     color: var(--text-primary);

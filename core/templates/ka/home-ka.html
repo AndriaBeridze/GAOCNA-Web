@@ -19,20 +19,9 @@
                     <i class="bi bi-caret-right-fill"></i>
                 </button>
             </nav>
-            {% for news in recent_news %}
-                <article class="news-item" id="news">
-                    <div class="news-thumbnail">
-                        <img src="{{ news.thumbnail.url }}" alt="Image">
-                    </div>
-                    <div class="news-details">
-                        <div class="news-info">
-                            <h3 class="news-title">{{ news.title }}</h3>
-                            <p class="news-date"><span>თარიღი:</span> <span lang="en">{{ news.date | date:"m/d/Y" }}</span></p>
-                        </div>
-                        <a href="#" class="read-more-link">სრულად წაკითხვა</a>
-                    </div>
-                </article>
-            {% endfor %}
+            <div class="news-container" id="news-container">
+            
+            </div>
             <div class="carousel-indicators" id="carousel-indicators">
             </div>
             <script src="{% static 'js/news-carousel-slide.js' %}"></script>
