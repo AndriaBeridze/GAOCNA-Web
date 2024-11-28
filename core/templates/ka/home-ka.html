@@ -1,43 +1,14 @@
-{% extends "ka/layout-ka.html" %}
+{% extends "ka/widget-ka.html" %}
 {% load static %}
 
 {% block title %} მთავარი - ჩრდილოეთ ამერიკის ქართული ეპარქია {% endblock %}
 
-{% block css %} 
+{% block extra_css %} 
     <link rel="stylesheet" href="{% static 'css/pages/home.css' %}">
     <link rel="stylesheet" href="{% static 'css/responsive/home.css' %}">
 {% endblock %}
 
-{% block main %}    
-    <section class="widgets-panel">
-        <article class="widget">
-            <header class="widget-header">
-                სათაური 1
-            </header>
-            <div class="widget-body">
-                <div class="widget-image-container">
-                    <img src="{% static 'images/test/widget-test.jpg' %}" alt="სურათი">
-                </div>
-            </div>
-        </article>
-        <article class="widget">
-            <header class="widget-header">
-                სათაური 2
-            </header>
-            <div class="widget-body">
-                <div class="widget-image-container">
-                    <img src="{% static 'images/test/widget-test-2.jpeg' %}" alt="სურათი">
-                </div>
-            </div>
-        </article>
-        <article class="widget">
-            <header class="widget-header">
-                სათაური 3
-            </header>
-            <div class="widget-body">
-            </div>
-        </article>
-    </section>
+{% block center-panel %}    
     <section class="news-carousel-panel">
         <div class="news-carousel-slide">
             <nav class="carousel-navigation" id="carousel-navigation">
@@ -67,27 +38,4 @@
             <script src="{% static 'js/news-carousel-slide.js' %}"></script>
         </div>
     </section>
-    <aside class="widgets-panel">
-        <article class="widget">
-            <header class="widget-header">
-                სათაური 4
-            </header>
-            <div class="widget-body">
-            </div>
-        </article>
-        <article class="widget">
-            <header class="widget-header">
-                სათაური 5
-            </header>
-            <div class="widget-body">
-            </div>
-        </article>
-        <article class="widget">
-            <header class="widget-header">
-                სათაური 6
-            </header>
-            <div class="widget-body">
-            </div>
-        </article>
-    </aside>
 {% endblock %}

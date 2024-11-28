@@ -2,11 +2,7 @@
     .main-content {
         flex-direction: column;
     }
-
-    .widgets-panel {
-        display: none;
-    }
-
+    
     .carousel-btn {
         font-size: 16px;
     }

@@ -1,0 +1,66 @@
+{% extends "ka/layout-ka.html" %}
+{% load static %}
+
+{% block css %} 
+    <link rel="stylesheet" href="{% static 'css/pages/widget.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive/widget.css' %}">
+    {% block extra_css %} {% endblock %}
+{% endblock %}
+
+{% block main %}    
+    <section class="widgets-panel">
+        <article class="widget">
+            <header class="widget-header">
+                სათაური 1
+            </header>
+            <div class="widget-body">
+                <div class="widget-image-container">
+                    <img src="{% static 'images/test/widget-test.jpg' %}" alt="სურათი">
+                </div>
+            </div>
+        </article>
+        <article class="widget">
+            <header class="widget-header">
+                სათაური 2
+            </header>
+            <div class="widget-body">
+                <div class="widget-image-container">
+                    <img src="{% static 'images/test/widget-test-2.jpeg' %}" alt="სურათი">
+                </div>
+            </div>
+        </article>
+        <article class="widget">
+            <header class="widget-header">
+                სათაური 3
+            </header>
+            <div class="widget-body">
+            </div>
+        </article>
+    </section>
+    <div class="center-panel">
+        {% block center-panel %} {% endblock %}
+    </div>
+    <aside class="widgets-panel">
+        <article class="widget">
+            <header class="widget-header">
+                სათაური 4
+            </header>
+            <div class="widget-body">
+            </div>
+        </article>
+        <article class="widget">
+            <header class="widget-header">
+                სათაური 5
+            </header>
+            <div class="widget-body">
+            </div>
+        </article>
+        <article class="widget">
+            <header class="widget-header">
+                სათაური 6
+            </header>
+            <div class="widget-body">
+            </div>
+        </article>
+    </aside>
+{% endblock %}
